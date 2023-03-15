@@ -4,7 +4,7 @@ public class Administrator {
     private String nume;
     private int varsta;
 
-    //eager initialization- dezavantaj: obiectul e crear fie ca e folosit, fie ca nu
+    //eager initialization- dezavantaj: obiectul e creat fie ca e folosit, fie ca nu
     private static Administrator instanta = new Administrator("Gigel", 20);
 
 
