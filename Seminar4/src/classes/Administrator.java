@@ -8,7 +8,7 @@ public class Administrator {
     private static Administrator instanta = new Administrator("Gigel", 20);
 
 
-    public Administrator(String nume, int varsta) {
+    private Administrator(String nume, int varsta) {
         this.nume = nume;
         this.varsta = varsta;
     }

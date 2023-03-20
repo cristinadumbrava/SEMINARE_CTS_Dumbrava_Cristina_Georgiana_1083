@@ -7,7 +7,7 @@ public class Soare {
     //lazy initialization
     private static Soare instance = null;
 
-    public Soare(float diametru, String culoare) {
+    private Soare(float diametru, String culoare) {
         this.diametru = diametru;
         this.culoare = culoare;
     }
