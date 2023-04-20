@@ -18,6 +18,7 @@ public class Main {
         Prototype retetaLaborator = reteta1.clonare();
         Prototype retetaPacient = reteta1.clonare();
 
+
         System.out.println(reteta1.toString());
         System.out.println(retetaLaborator.toString());
         System.out.println(retetaPacient.toString());
