@@ -16,7 +16,7 @@ public class Main {
 
         Builder builderPacient2 = new BuilderPacient2();
         Pacient pacient3 = builderPacient2.setNume("Matei").setHalatPentruInterior(true).build();
-        Pacient pacient4 = builderPacient2.setNume("Alex").build();//folosim acelasi builder, deci atributul va fi deja initializat; pt reinitializare apelam setter-ul pt atributul pe care vrem sa l modificam
+        Pacient pacient4 = builderPacient2.setNume("Alex").build();//folosim acelasi builder, deci atributul va fi deja initializat; pentru reinitializare apelam setter-ul pt atributul pe care vrem sa l modificam
         System.out.println(pacient3);
         System.out.println(pacient4);
 
