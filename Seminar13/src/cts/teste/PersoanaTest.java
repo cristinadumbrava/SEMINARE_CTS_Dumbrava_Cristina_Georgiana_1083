@@ -4,14 +4,15 @@ import cts.clase.ExceptieCNPInexistent;
 import cts.clase.ExceptieVarsta;
 import cts.clase.IPersoana;
 import cts.clase.Persoana;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class PersoanaTest {
-
+public class PersoanaTest {
+    @Tag("Tag1")
     @Test
     void testGetVarstaRight() {
         IPersoana persoana = new Persoana("Adrian", "5010512415523");
@@ -20,12 +21,14 @@ class PersoanaTest {
     }
 
     //test boundary limita superioara
+    @Tag("Tag2")
     @Test
     void testGetVarstaBoundaryNonNascut(){
         IPersoana persoana = new Persoana("Marcel", "5230523551122");
         assertEquals(0, persoana.getVarsta());
     }
 
+    @Tag("Tag1")
     @Test
     void testGetVarstaBoundaryAn2000(){
         IPersoana persoana = new Persoana("Valentin", "6000101442333");
@@ -33,6 +36,7 @@ class PersoanaTest {
     }
 
     //limita superioara pt intervalul (1900,1999)
+    @Tag("Tag1")
     @Test
     void testGetVarstaBoundaryAn1999(){
         IPersoana persoana = new Persoana("Valentin", "1991231551177");
@@ -44,6 +48,7 @@ class PersoanaTest {
     //crosscheck - determin rezultatul prin intermediul altei metode
     //error condition
 
+    @Tag("Tag2")
     @Test
     void testGetVarstaError(){
         IPersoana persoana = new Persoana("Matei", "6230724661122");
@@ -53,12 +58,14 @@ class PersoanaTest {
     }
 
     //performance
+    @Tag("Tag2")
     @Test
     void testGetVarstaPerformance(){
         IPersoana persoana = new Persoana("Ana", "6010256845129");
         assertTimeout(Duration.ofMillis(100), () -> persoana.getVarsta());
     }
 
+    @Tag("Tag1")
     @Test
     void testConstructorVarstaConformance(){
         Persoana persoana = new Persoana("Elena", "6020304562318");
@@ -66,6 +73,7 @@ class PersoanaTest {
     }
 
     //order
+    @Tag("Tag1")
     @Test
     void testGetVarstaOrder(){
         IPersoana persoana = new Persoana("Alin", "5020506987456");
@@ -79,6 +87,7 @@ class PersoanaTest {
     //refference - metoda va apela ceva ce nu tine de ea
     //existence - verificam daca exista ceva ~ error condition
 
+    @Tag("Tag2")
     @Test
     void testGetVarstaCNP(){
         IPersoana persoana = new Persoana(null, null);
@@ -86,6 +95,7 @@ class PersoanaTest {
     }
 
     //cardinalitate - 0,1,n elemente
+    @Tag("Tag2")
     @Test
     void testGetVarstaCardinalitate(){
         IPersoana persoana = new Persoana("Andra", "6220523446767");
